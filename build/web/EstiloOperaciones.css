@@ -1,0 +1,31 @@
+div
+{
+    background-color : #F5D0A9;
+    width : 1000px;
+    padding : 8px;
+    border : 5px solid orange;
+    margin : 5px;
+	
+}
+
+res 
+{
+    font-family: Impact;
+    color : red;
+    background-color : black;
+    width : 40px;
+    padding : 8px;
+    border : 5px solid yellow;
+    margin : 0px;
+}
+
+color
+{
+    color:white;
+    font-family : Cambria;
+}
+
+body 
+{
+background-image : url(http://www.kdeblog.com/wp-content/uploads/2012/05/ariya-blue_800x600.png);
+}

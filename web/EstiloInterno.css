@@ -1,0 +1,31 @@
+div
+{
+    background-color : #F2F5A9;
+    width : 1000px;
+    padding : 8px;
+    border : 5px solid yellow;
+    margin : 5px;
+	
+}
+
+res 
+{
+    font-family: Impact;
+    color : red;
+    background-color : yellow;
+    width : 40px;
+    padding : 8px;
+    border : 5px solid green;
+    margin : 5px;
+}
+
+color
+{
+    color : green;
+    font-family : Courier;
+}
+
+body 
+{
+background-image : url(http://k45.kn3.net/B859134E4.jpg);
+}

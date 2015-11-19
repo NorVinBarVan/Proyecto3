@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>MODIFICAR SOLICITUDES</title>
+    </h:head>
+    <link type = "text/css" rel = "stylesheet" href = "EstiloOperaciones.css"/>
+    <br><br></br></br><br></br><br></br>
+    <h:body>
+        <center>
+        <div>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="MODIFICAR SOLICITUDES"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Codigo:" for="codigoSolicitud" />
+                    <h:inputText readonly="true" id="codigoSolicitud" value="#{proyecto3Controlador.s.codigoSolicitud}" title="POR POLITICA DE LA EMPRESA, UNA VEZ CREADO EL CODIGO YA NO SE PUEDE MODIFICAR" required="true" requiredMessage="El campo Codigo es requerido."/>
+                    <h:outputLabel value="Fecha de Creacion:" for="fechaDeCreacion" />
+                    <h:inputText id="fechaDeCreacion" value="#{proyecto3Controlador.s.fechaDeCreacion}" title="Ej: 28/12/2015" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="Paquete a Comprar:" for="paqueteAComprar" />
+                    <h:inputText id="paqueteAComprar" value="#{proyecto3Controlador.s.paqueteAComprar}" title="Ej: Deportes" />
+                    <h:outputLabel value="Precio:" for="precio" />
+                    <h:inputText id="precio" value="#{proyecto3Controlador.s.precio}" title="12000" />
+                    <h:outputLabel value="Codigo Administrador:" for="codigoAdm" />
+                    <h:selectOneMenu id="codigoAdm" value="#{proyecto3Controlador.s.codigoAdm}" title="Ej: 456" >
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{fixme}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="Codigo Vendedor:" for="codigoVendedor" />
+                    <h:selectOneMenu id="codigoVendedor" value="#{proyecto3Controlador.s.codigoVendedor}" title="Ej: 456" >
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{fixme}"/>
+                    </h:selectOneMenu>
+                    
+                    <br></br><br></br>
+                    <h:commandButton value="☑ GUARDAR CAMBIO" action="#{proyecto3Controlador.Solicitud_Modificar()}" onclick="return confirm('DATOS ACTUALIZADOS SATISFACTORIAMENTE')"></h:commandButton>
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+            
+            <form>
+        <br></br><br></br>
+            <input type="button" value="REGRESAR A INDEX" onClick="location.href = 'index.xhtml' "></input>
+    </form>
+            </div>
+        </center>
+
+    </h:body>
+</html>
+

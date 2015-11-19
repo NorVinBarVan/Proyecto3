@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>MODIFICAR VENDEDOR</title>
+    </h:head>
+    <link type = "text/css" rel = "stylesheet" href = "EstiloOperaciones.css"/>
+    <br><br></br></br><br></br><br></br>
+    <h:body>
+        <center>
+        <div>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="MODIFICAR VENDEDOR"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Codigo:" for="codigoVendedor" />
+                    <h:inputText readonly="true" id="codigoVendedor" value="#{proyecto3Controlador.v.codigoVendedor}" title="POR POLITICA DE LA EMPRESA, UNA VEZ CREADO EL CODIGO YA NO SE PUEDE MODIFICAR" required="true" requiredMessage="El campo Codigo es requerido."/>
+                    <h:outputLabel value="Nombre:" for="nombre" />
+                    <h:inputText id="nombre" value="#{proyecto3Controlador.v.nombre}" title="Ej: Andres" />
+                    <h:outputLabel value="Nit:" for="nit" />
+                    <h:inputText id="nit" value="#{proyecto3Controlador.v.nit}" title="Ej: 6879733" />
+                    <h:outputLabel value="Edad:" for="edad" />
+                    <h:inputText id="edad" value="#{proyecto3Controlador.v.edad}" title="Ej: 33" />
+                    <h:outputLabel value="Salario:" for="salario" />
+                    <h:inputText id="salario" value="#{proyecto3Controlador.v.salario}" title="Ej: 4900" />
+                    
+                    <br></br><br></br>
+                    <h:commandButton value="☑ GUARDAR CAMBIO" action="#{proyecto3Controlador.Vendedor_Modificar()}" onclick="return confirm('DATOS ACTUALIZADOS SATISFACTORIAMENTE')"></h:commandButton>
+                </h:panelGrid>
+                
+            </h:form>
+        </f:view>
+            
+            <form>
+        <br></br><br></br>
+            <input type="button" value="REGRESAR A INDEX" onClick="location.href = 'index.xhtml' "></input>
+    </form>
+            </div>
+        </center>
+
+    </h:body>
+</html>
+

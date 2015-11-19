@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>REPORTE PAQUETES</title>
+    </h:head>
+    <link type = "text/css" rel = "stylesheet" href = "EstiloInterno.css"/>
+    <center>
+    <h1>
+    <color>        
+    REPORTE PAQUETES DE EXPOTOUR
+    </color>
+    </h1>
+    </center>
+    <br></br>
+    <h:body>
+        <center>
+        <div>
+        <h:form>
+            <input type="button" value="AGREGAR NUEVO REGISTRO" onClick="location.href = 'Paquete_Agregar.xhtml' "></input>
+            <br><br></br></br>
+        <h:dataTable var="p" value="#{proyecto3Controlador.findPaquetes()}" border="5" cellpadding="10" cellspacing="2">
+            <h:column>
+                <f:facet name="header">Codigo Paquete</f:facet>
+                <h:outputText value="#{p.codigoPaquete}"></h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Nombre Paquete</f:facet>
+                <h:outputText value="#{p.nombre}"></h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Descripcion Paquete</f:facet>
+                <h:outputText value="#{p.descripcion}"></h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Fecha de Ejecucion</f:facet>
+                <h:outputText value="#{p.fechaDeEjecucion}"></h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Precio Paquete</f:facet>
+                <h:outputText value="#{p.precio}"></h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Codigo Administrador</f:facet>
+                <h:outputText value="#{p.codigoAdm}"></h:outputText>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Opcion</f:facet>
+                <h:commandLink value="ELIMINAR" action="#{proyecto3Controlador.Paquete_Eliminar(p)}" onclick="return confirm('SE ELIMINARA ESTE REGISTRO')"></h:commandLink>
+                /
+                <h:commandLink value="MODIFICAR" action="#{proyecto3Controlador.Paquete_Modificar(p)}"></h:commandLink>
+            </h:column>
+        </h:dataTable>
+        </h:form>
+        
+            <form>
+        <br></br><br></br>
+            <input type="button" value="REGRESAR A INDEX" onClick="location.href = 'index.xhtml' "></input>
+    </form>
+            </div>
+        </center>
+    </h:body>
+</html>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>AGREGAR PAQUETES</title>
+    </h:head>
+    <link type = "text/css" rel = "stylesheet" href = "EstiloOperaciones.css"/>
+    <br><br></br></br><br></br><br></br>
+    <h:body>
+       <center>
+        <div>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="AGREGAR PAQUETES"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Codigo:" for="codigoPaquete" />
+                    <h:inputText id="codigoPaquete" value="#{proyecto3Controlador.p.codigoPaquete}" title="Ej: 123" required="true" requiredMessage="El campo Codigo es requerido."/>
+                    <h:outputLabel value="Nombre:" for="nombre" />
+                    <h:inputText id="nombre" value="#{proyecto3Controlador.p.nombre}" title="Ej: Vacaciones" />
+                    <h:outputLabel value="Descripcion:" for="descripcion" />
+                    <h:inputText id="descripcion" value="#{proyecto3Controlador.p.descripcion}" title="Ej: Viaje a Rusia" />
+                    <h:outputLabel value="Fecha de Ejecucion:" for="fechaDeEjecucion" />
+                    <h:inputText id="fechaDeEjecucion" value="#{proyecto3Controlador.p.fechaDeEjecucion}" title="Ej: 03/12/2015" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="Precio:" for="precio" />
+                    <h:inputText id="precio" value="#{proyecto3Controlador.p.precio}" title="Ej: 20000" />
+                    <h:outputLabel value="CodigoAdm:" for="codigoAdm" />
+                    <h:selectOneMenu id="codigoAdm" value="#{proyecto3Controlador.p.codigoAdm}" title="Ej: 123" >
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{fixme}"/>
+                    </h:selectOneMenu>
+                    
+                    <br></br><br></br>
+                    <h:commandButton value="☑ GUARDAR PAQUETE" action="#{proyecto3Controlador.Paquete_Agregar()}" onclick="return confirm('REGISTRO GUARDADO SATISFACTORIAMENTE')"></h:commandButton>
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+            
+            <form>
+        <br></br><br></br>
+            <input type="button" value="REGRESAR A INDEX" onClick="location.href = 'index.xhtml' "></input>
+    </form>
+            </div>
+        </center>
+    </h:body>        
+</html>
+
